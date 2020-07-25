@@ -13,6 +13,21 @@ Behold My Awesome Project!
 
 :License: MIT
 
+Run docker
+--------
+
+* To build use::
+
+  $> docker-compose -f local.yml build
+
+* To run docker use::
+
+  $> docker-compose -f local.yml up
+
+The Angular Front will tsart on http://localhost:8080
+The Django Back will start on http://localhost/
+
+
 
 Settings
 --------
