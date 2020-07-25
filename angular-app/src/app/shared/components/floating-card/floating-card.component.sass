@@ -1,0 +1,30 @@
+@import '../../../../assets/static/global.sass'
+
+.floating-card
+    opacity: 0
+    backdrop-filter: blur(2px)
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+    right: 0
+    z-index: -999
+    background-color: rgba(255,255,255,.6)
+    transform: scale3d(1.5, 1.5, 1.5)
+    transition: opacity .5s, transform .5s, z-index 1s
+    &.show
+        opacity: 1
+        transform: scale3d(1, 1, 1)
+        z-index: 999
+        transition: opacity .5s, transform .5s, z-index 0s
+    .card
+        width: fit-content
+        height: fit-content
+        position: fixed
+        top: 10vh
+        left: 50%
+        max-width: 40vw
+        background-color: white
+        border: 1px solid $secondary
+        padding: 20px
+        transform: translateX(-50%)

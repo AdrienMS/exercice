@@ -1,0 +1,44 @@
+@import '../../../../assets/static/global.sass'
+
+.container
+    height: 68px
+.navbar
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    z-index: 99
+    box-shadow: $box-shadow-1
+    background-color: $primary
+    .logo.navbar-brand
+        color: white
+        font-size: 1.75rem
+        &:hover
+            color: white
+
+    .navbar-nav
+        .nav-item
+            .nav-link
+                color: white
+                &:hover
+                    color: $secondary-light
+            p
+                margin: 0
+                cursor: pointer
+            .profil
+                width: 40px
+                margin-right: 10px
+            .dropdown-menu
+                left: 0px
+        .btn-link
+            color: white
+            text-decoration: none
+            &:hover
+                color: $secondary-light
+        .btn-secondary
+            background-color: $secondary
+            border-color: $secondary
+            color: white
+            &:hover
+                background-color: $secondary-dark
+                border-color: $secondary-dark

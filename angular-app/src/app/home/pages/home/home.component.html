@@ -1,0 +1,7 @@
+<app-menu></app-menu>
+<ul class="list-group" *ngIf="(users$ | async) as users; else NotConnected">
+    <li *ngFor="let user of users" class="list-group-item" [ngClass]="{'primary': user.is_staff}">{{ user.username }}</li>
+</ul>
+<ng-template #NotConnected>
+    <p>Vous devez vous connecter pour voir la liste des utilisateurs</p>
+</ng-template>

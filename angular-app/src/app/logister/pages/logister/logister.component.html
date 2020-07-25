@@ -1,0 +1,16 @@
+<app-menu></app-menu>
+<div class="logister">
+  <div class="parallax-card">
+    <div class="parallax-card__holder" [ngClass]="{'toggle': isToggle}">
+      <div class="parallax-card__front">
+        <app-login class="parallax-card__content" (toggle)="toggleCard()" (isLoading)="loading($event)" (isError)="onError($event)"></app-login>
+      </div>
+      <div class="parallax-card__back">
+        <app-register class="parallax-card__content" (toggle)="toggleCard()" (isLoading)="loading($event)" (isError)="onError($event)"></app-register>
+      </div>
+    </div>
+  </div>
+  <div class="alert alert-danger" role="alert" *ngIf="message">
+    {{ message }}
+  </div>
+</div>

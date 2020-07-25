@@ -1,0 +1,77 @@
+@import './assets/static/global.sass'
+@import "~bootstrap/scss/bootstrap.scss"
+
+body
+  margin: 0
+
+@font-face
+  font-family: 'Material Icons'
+  font-style: normal
+  font-weight: 400
+  src: url(https://example.com/MaterialIcons-Regular.eot) /* For IE6-8 */
+  src: local('Material Icons'),local('MaterialIcons-Regular'),url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),url(https://example.com/MaterialIcons-Regular.woff) format('woff'),url(https://example.com/MaterialIcons-Regular.ttf) format('truetype')
+
+@import url('https://fonts.googleapis.com/css2?family=Megrim&display=swap')
+
+.parallax
+  // background-image: url('./assets/imgs/banner.jpg')
+  min-height: 50vh
+  background-attachment: fixed
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+.material-icons
+  font-family: 'Material Icons'
+  font-weight: normal
+  font-style: normal
+  font-size: 24px  /* Preferred icon size */
+  display: inline-block
+  line-height: 1
+  text-transform: none
+  letter-spacing: normal
+  word-wrap: normal
+  white-space: nowrap
+  direction: ltr
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale
+
+  /* Support for IE. */
+  font-feature-settings: 'liga'
+
+.margin-top
+  margin-top: 20px
+
+.btn-outline-secondary
+  &:hover
+    color: white
+
+.mat-form-field
+  &.mat-focused
+    .mat-form-field-wrapper
+      .mat-form-field-underline
+        .mat-form-field-ripple
+          background-color: $secondary
+      .mat-form-field-flex
+        .mat-form-field-infix
+          .mat-form-field-label-wrapper
+            .mat-form-field-label
+              color:  $secondary
+
+  .mat-form-field-wrapper
+    .mat-form-field-underline
+      background-color: $primary
+    .mat-form-field-flex
+      .mat-form-field-infix
+        .mat-form-field-label-wrapper
+          .mat-form-field-label
+            color: $primary
+
+.mat-progress-spinner circle, .mat-spinner circle
+  stroke:  $secondary

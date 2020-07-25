@@ -1,0 +1,7 @@
+<div class="card">
+    <h2 class="card-title">Inscription</h2>
+    <div class="card-body">
+        <app-dynamic-form [fields]="formConfig" (submit)='submit($event)'></app-dynamic-form>
+    </div>
+    <button type="button" class="btn btn-link" (click)="callToggle()">Déjà un compte ?</button>
+</div>

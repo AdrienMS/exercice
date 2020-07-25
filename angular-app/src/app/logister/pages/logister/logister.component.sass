@@ -1,0 +1,113 @@
+@import '../../../../assets/static/global.sass'
+
+.logister
+  width: 100%
+  height: calc(100vh - 58px)
+  background-size: cover
+  background-repeat: no-repeat
+  .alert
+    position: fixed
+    bottom: 0
+    left: 0
+    right: 0
+
+.parallax-card
+    position: absolute
+    top: 20%
+    left: 50%
+    transform: translateX(-50%) translateY(-50%)
+    border-radius: 5px
+    width: 50vw
+    &__holder
+        height: 100%
+        transform-style: preserve-3d
+        perspective: 1000px
+        border-radius: 5px
+        will-change: transform
+        cursor: pointer
+        &.toggle
+            .parallax-card__front
+                transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
+                transform: rotateY(-180deg)
+                transform-style: preserve-3d
+
+            .parallax-card__back
+                transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
+                transform: rotateY(0deg)
+                transform-style: preserve-3d
+
+    &__content
+        transform: translateZ(60px) scale(0.94)
+        position: absolute
+        left: 0
+        top: 0
+        width: 100%
+        box-sizing: border-box
+        perspective: inherit
+        z-index: 2
+        will-change: transform
+
+    &__front
+        transform: rotateY(0deg)
+        transform-style: preserve-3d
+        background-size: cover
+        background-position-x: 50%
+        background-position-y: 50%
+        background-repeat: no-repeat
+        min-height: 100%
+        height: auto
+        backface-visibility: hidden
+        border-radius: 10px
+        color: $secondary
+        font-size: 1.5rem
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
+        will-change: transform
+        background-color: rgba(255, 255, 255, .8)
+        &-title
+            display: block
+            text-align: center
+
+    &__back
+        transform: rotateY(180deg)
+        transform-style: preserve-3d
+        background-size: cover
+        transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1)
+        min-height: 100%
+        position: absolute
+        top: 0
+        left: 0
+        will-change: transform
+        width: 100%
+        height: auto
+        border-radius: 10px
+        color: $secondary
+        backface-visibility: hidden
+        font-size: 1.5rem
+        background-color: rgba(255, 255, 255, .8)
+        &-descr
+            display: block
+            text-align: center
+
+.card-body
+  form
+    label
+      text-align: left
+      color: #000
+      font-size: 1rem
+      width: 100%
+      margin-top: 20px
+    .btn
+        background-color: $secondary
+        border-color: $secondary
+        color: white
+        &:hover
+            background-color: $secondary-dark
+            border-color: $secondary-dark
+  button
+    margin-top: 20px
+
+  .btn-link
+      color: $secondary
+      &:hover
+          color: $secondary-dark
+          text-decoration: none
